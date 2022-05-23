@@ -1,9 +1,8 @@
-{
-"CORSRules": [
-{
-"AllowedHeaders": ["*"],
-"AllowedMethods": ["GET"],
-"AllowedOrigins": ["*"]
-}
-]
-}
+[
+    {
+       "origin": ["*"],
+       "responseHeader": ["X-Requested-With", "Access-Control-Allow-Origin", "Content-Type"],
+       "method": ["GET", "HEAD", "DELETE", "OPTIONS"],
+       "maxAgeSeconds": 3600
+     }
+  ]
