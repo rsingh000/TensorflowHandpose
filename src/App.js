@@ -75,6 +75,13 @@ function App() {
 
   return (
     <div className="App">
+      <div className="guidelines">
+        <h2>Some Important Instructions <br />for better performance of <br /> machine learning model.</h2>
+        <div className="list">
+          <span>Hold your hand still for couple of seconds until bounding boxes seems to appear.</span>
+          <span>Ensure the enough amount of light in the room. This model has not been trained in darkness.</span>
+        </div>
+      </div>
       <header className="App-header">
         <Webcam
           ref={webcamRef}
@@ -87,7 +94,7 @@ function App() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
+            width: '100%',
             height: 480,
           }}
         />
@@ -102,11 +109,34 @@ function App() {
             right: 0,
             textAlign: "center",
             zindex: 8,
-            width: 640,
+            width: '100%',
             height: 480,
           }}
         />
       </header>
+      <h2>Take a look at few tutorials below</h2>
+      <div className="examples">
+          <figure className="up">
+            <img src="https://i.ibb.co/VqZC04H/up.jpg"
+                alt="Up Direction" />
+            <figcaption>UP handpose detected at the precision 91% with blue outbound box</figcaption>
+          </figure>
+          <figure className="down">
+            <img src="https://i.ibb.co/99QwqH9/down.jpg"
+                alt="Down Direction" />
+            <figcaption>DOWN handpose detected at the precision 97% with green outbound box</figcaption>
+          </figure>
+          <figure className="left">
+            <img src="https://i.ibb.co/HFJxLPj/left.jpg"
+                alt="Left Direction" />
+            <figcaption>LEFT handpose detected at the precision 86% with red outbound box</figcaption>
+          </figure>
+          <figure className="right">
+            <img src="https://i.ibb.co/dmSNsJz/right.jpg"
+                alt="Right Direction" />
+            <figcaption>RIGHT handpose detected at the precision 98% with yellow outbound box</figcaption>
+          </figure>
+      </div>
     </div>
   );
 }
